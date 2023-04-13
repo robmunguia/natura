@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Regístro Consultor(a)</h2>
+    <div class="row">
+      <div class="col-12">
+        <form (ngSubmit)="sendMail()" [formGroup]="mailForm" #contactForm="ngForm" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" formControlName="name" class="form-control" id="name" placeholder="Nombre Completo" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" formControlName="email" name="email" id="email" placeholder="Correo Electrónico" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" formControlName="phone" name="phone" id="phone" placeholder="Teléfono" required>
+          </div>
+          <div class="form-group mt-3">
+            <input type="number" class="form-control" formControlName="age" name="age" id="age" placeholder="Edad" required>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" formControlName="city" name="city" id="city" placeholder="Que parte de la república eres?" required>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" formControlName="consultor" name="consultor" id="consultor" placeholder="Eres o fuiste consultora Natura?" required>
+          </div>
+          <div class="my-3">
+            <div class="loading">Cargando</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Tu mensaje ha sido enviado. Gracias!</div>
+          </div>
+          <div class="text-center"><button [disabled]="!contactForm.valid" type="submit">{{ !loading ? 'Enviar' : 'Enviando' }} </button></div>
+        </form>
+      </div>
+    </div>
+
+  </div>
