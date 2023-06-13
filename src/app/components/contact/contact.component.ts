@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
         Username: environment.Username,
         Password: environment.Password,
         To: environment.To,
-        From: 'vaguilar@naturaaguaviva.com',
+        From: 'naturaaguaviva69@gmail.com',
         Subject: 'Nuevo Registro de Natura Agua Viva',
         Body : ` <h3>Informacion del Consultor registrado</h3>
         <ul>
